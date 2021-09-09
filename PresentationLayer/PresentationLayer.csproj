@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\netcoreapp3.0\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\netcoreapp3.0\EntityFramework.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFA834C1-851A-4B90-A507-AF38D8AC24F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PresentationLayer</RootNamespace>
+    <AssemblyName>PresentationLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminView\AdminApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminView\AdminApp.Designer.cs">
+      <DependentUpon>AdminApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminView\DeleteUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminView\DeleteUserForm.Designer.cs">
+      <DependentUpon>DeleteUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumnusView\AlumnusActivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnusView\AlumnusActivities.Designer.cs">
+      <DependentUpon>AlumnusActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumnusView\AlumnusApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnusView\AlumnusApp.Designer.cs">
+      <DependentUpon>AlumnusApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumnusView\AlumnusProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnusView\AlumnusProfile.Designer.cs">
+      <DependentUpon>AlumnusProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminView\AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminView\AddEmployeeForm.Designer.cs">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumnusView\EditProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnusView\EditProfileForm.Designer.cs">
+      <DependentUpon>EditProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumnusView\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnusView\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\ActivitiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\ActivitiesForm.Designer.cs">
+      <DependentUpon>ActivitiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\AlumnusInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\AlumnusInfo.Designer.cs">
+      <DependentUpon>AlumnusInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView\CreateActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView\CreateActivityForm.Designer.cs">
+      <DependentUpon>CreateActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView\CreateMailingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView\CreateMailingsForm.Designer.cs">
+      <DependentUpon>CreateMailingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\EditActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\EditActivityForm.Designer.cs">
+      <DependentUpon>EditActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\EditEmployeeInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\EditEmployeeInfoForm.Designer.cs">
+      <DependentUpon>EditEmployeeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView\EmployeeApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView\EmployeeApp.Designer.cs">
+      <DependentUpon>EmployeeApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\SearchedStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\SearchedStudents.Designer.cs">
+      <DependentUpon>SearchedStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeView\SeeRecieversForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeView\SeeRecieversForm.Designer.cs">
+      <DependentUpon>SeeRecieversForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObserverPattern1\IObserver.cs" />
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObserverPattern1\ISubject.cs" />
+    <Compile Include="ObserverPattern1\Observer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ObserverPattern1\Subject.cs" />
+    <EmbeddedResource Include="AdminView\AdminApp.resx">
+      <DependentUpon>AdminApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminView\DeleteUserForm.resx">
+      <DependentUpon>DeleteUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumnusView\AlumnusActivities.resx">
+      <DependentUpon>AlumnusActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumnusView\AlumnusApp.resx">
+      <DependentUpon>AlumnusApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumnusView\AlumnusProfile.resx">
+      <DependentUpon>AlumnusProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminView\AddEmployeeForm.resx">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumnusView\EditProfileForm.resx">
+      <DependentUpon>EditProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumnusView\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\ActivitiesForm.resx">
+      <DependentUpon>ActivitiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\AlumnusInfo.resx">
+      <DependentUpon>AlumnusInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView\CreateActivityForm.resx">
+      <DependentUpon>CreateActivityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView\CreateMailingsForm.resx">
+      <DependentUpon>CreateMailingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\EditActivityForm.resx">
+      <DependentUpon>EditActivityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\EditEmployeeInfoForm.resx">
+      <DependentUpon>EditEmployeeInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView\EmployeeApp.resx">
+      <DependentUpon>EmployeeApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\SearchedStudents.resx">
+      <DependentUpon>SearchedStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeView\SeeRecieversForm.resx">
+      <DependentUpon>SeeRecieversForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj">
+      <Project>{afa2083c-8784-431b-ad73-f4cef9595d8e}</Project>
+      <Name>BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{6d05b26d-6f8b-4395-9337-05fca67d9172}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer2\DataLayer.csproj">
+      <Project>{7b8211c9-95f6-441e-beb0-50fa82db2ead}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\netcoreapp3.0\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\netcoreapp3.0\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\netcoreapp3.0\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\netcoreapp3.0\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.4.0\build\netcoreapp3.0\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\netcoreapp3.0\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

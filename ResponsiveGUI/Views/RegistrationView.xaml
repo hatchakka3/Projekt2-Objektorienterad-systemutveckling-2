@@ -1,0 +1,90 @@
+﻿<Window x:Class="ResponsiveGUI.Views.RegistrationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResponsiveGUI.Views"
+        mc:Ignorable="d"
+        Title="RegistrationView" Height="700" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="18"
+                  Margin="0,20,0,0" Grid.ColumnSpan="2">Name:</TextBlock>
+
+        <TextBox Text="{Binding Path=Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="1"
+                 Margin="55,20,0,40"></TextBox>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="18"
+                   Margin="0,60,0,0" Grid.ColumnSpan="2">Social security number:</TextBlock>
+
+        <TextBox Text="{Binding Path=SSN, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="1"
+                 Margin="180,60,0,0"></TextBox>
+
+        <TextBlock Grid.Column="1" Grid.Row="2" FontSize="18"
+                  Margin="0,15,0,0" Grid.ColumnSpan="2">Education:</TextBlock>
+
+        <TextBox Text="{Binding Path=Education, Mode=TwoWay}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="1"
+                 Margin="85,15,0,45"></TextBox>
+
+        <TextBlock Grid.Column="1" Grid.Row="2" FontSize="18"
+                   Margin="0,60,0,0" Grid.ColumnSpan="2">Degree:</TextBlock>
+
+        <TextBox Text="{Binding Path=Degree, Mode=TwoWay}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="1"
+                 Margin="70,60,0,0"></TextBox>
+
+        <TextBlock Grid.Column="1" Grid.Row="3" FontSize="18"
+                  Margin="0,15,0,0" Grid.ColumnSpan="2">Email:</TextBlock>
+
+        <TextBox Text="{Binding Path=Email, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" Grid.RowSpan="1"
+                 Margin="50,15,0,45"></TextBox>
+
+        <TextBlock Grid.Column="1" Grid.Row="3" FontSize="18"
+                   Margin="0,60,0,0" Grid.ColumnSpan="2">Username:</TextBlock>
+
+        <TextBox Text="{Binding Path=Username, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" Grid.RowSpan="1"
+                 Margin="85,60,0,0"></TextBox>
+
+        <TextBlock Grid.Column="1" Grid.Row="4" FontSize="18"
+                   Margin="0,15,0,0" Grid.ColumnSpan="2">Password:</TextBlock>
+
+        <TextBox Text="{Binding Path=Password, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" Grid.RowSpan="1"
+                 Margin="80,15,0,45"></TextBox>
+
+        <TextBlock Grid.Column="1" Grid.Row="4" FontSize="18"
+                   Margin="0,65,0,0" Grid.ColumnSpan="3">Additional information about yourself</TextBlock>
+
+        <TextBox Text="{Binding Path=Information, Mode=TwoWay}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4" Grid.RowSpan="2"
+                 Margin="0,0,0,0"></TextBox>
+
+        <Button x:Name="BackBtn" FontSize="22" Margin="10,40,10,0"
+                Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2">Back</Button>
+
+        <Button x:Name="RegisterBtn" FontSize="22" Margin="10,40,10,0"
+                Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="2">Register</Button>
+
+        <CheckBox IsChecked="{Binding Path=Check, Mode=TwoWay}" x:Name="check" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="7" FontSize="18" Margin="0,0,0,60">
+            I accept our Terms and Conditions
+        </CheckBox>
+
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+﻿<Window x:Class="ResponsiveGUI.Views.Employee.EmployeeAppView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResponsiveGUI.Views.Employee"
+        mc:Ignorable="d"
+        FontFamily="Segoe UI Light"
+        Title="EmployeeAppView" Height="450" Width="200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="Create activity" Grid.Column="1"
+               Grid.ColumnSpan="2" Grid.Row="1" Margin="0,5,0,5" FontSize="18"></Button>
+
+        <Button Content="Edit personal info" Grid.Column="1"
+               Grid.ColumnSpan="2" Grid.Row="2" Margin="0,5,0,5" FontSize="18"></Button>
+
+        <Button Content="Create mailing" Grid.Column="1"
+               Grid.ColumnSpan="2" Grid.Row="3" Margin="0,5,0,5" FontSize="18"></Button>
+
+        <Button Content="Search alumni" Grid.Column="1"
+               Grid.ColumnSpan="2" Grid.Row="4" Margin="0,5,0,5" FontSize="18"></Button>
+
+        <Button Content="See Activities" Grid.Column="1"
+               Grid.ColumnSpan="2" Grid.Row="5" Margin="0,5,0,5" FontSize="18"></Button>
+
+        <Button Content="Log out" Grid.Column="1"
+               Grid.ColumnSpan="2" Grid.Row="6" Margin="0,5,0,5" FontSize="18"></Button>
+    </Grid>
+</Window>
